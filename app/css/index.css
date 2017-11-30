@@ -1,0 +1,98 @@
+html,
+body {
+  overflow: hidden;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: #222;
+  font-family: 'Poppins', 'sans-serif';
+}
+.app-container {
+  width: 100%;
+  height: calc(100vh - 30px);
+}
+.status-bar {
+  width: 100%;
+  position: relative;
+  height: 30px;
+  background-color: #111;
+  padding: 5px 15px;
+  text-align: right;
+}
+.sidebar {
+  display: block;
+  height: 100vh;
+  float: left;
+  width: 280px;
+  background: #333;
+  -webkit-app-region: no-drag;
+}
+.sidebar__item {
+  display: block;
+  padding: 15px 25px;
+  color: #ccc;
+  cursor: pointer;
+}
+.sidebar__item.selected {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.sidebar__item > .link {
+  color: #ccc;
+  outline: none;
+  font-weight: 600;
+  text-decoration: none;
+}
+.sidebar__item > .link:hover {
+  text-decoration: none;
+}
+.sidebar__item > .description {
+  color: #ddd;
+  font-size: 11px;
+  font-style: italic;
+  margin: 5px 0 0 0;
+}
+.note-container {
+  width: calc(100% - 280px);
+  display: block;
+  position: relative;
+  float: left;
+}
+#note-content {
+  width: 50%;
+  display: block;
+  height: 100vh;
+  float: left;
+  padding: 20px;
+  margin: 0;
+  outline: none;
+  color: #999;
+  background-color: transparent;
+  border: none;
+  -webkit-app-region: no-drag;
+}
+#note-content::selection {
+  color: #f0f0f0;
+  background: #666;
+}
+#note-preview {
+  float: left;
+  width: 50%;
+  display: block;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.085);
+  -webkit-app-region: no-drag;
+  height: 100vh;
+  color: #999;
+  padding: 0 15px;
+}
+#note-preview code {
+  background: #585858;
+  font-family: 'Fira Mono', monospace;
+  padding: 10px;
+  display: block;
+  color: #ccc;
+  font-size: 13px;
+}
